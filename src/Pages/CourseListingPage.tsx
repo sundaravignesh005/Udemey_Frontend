@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "../styles/Pages/_course-listing.scss";
+import "../styles/pages/_course-listing.scss";
 
 interface Course {
   _id: string;
