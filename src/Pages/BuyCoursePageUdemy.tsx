@@ -366,8 +366,6 @@
 // export default BuyCoursePageUdemy;
 
 
-
-
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -407,13 +405,9 @@ interface Course {
   language?: string;
 }
 
-function CheckoutForm({
-  clientSecret,
-  course,
-}: {
-  clientSecret: string;
-  course: Course;
-}) {
+/* ================= CHECKOUT FORM ================= */
+
+function CheckoutForm({ course }: { course: Course }) {
   const stripe = useStripe();
   const elements = useElements();
   const [isProcessing, setIsProcessing] = useState(false);
@@ -465,11 +459,15 @@ function CheckoutForm({
         className="btn-buy-now"
         style={{ marginTop: "20px", width: "100%" }}
       >
-        {isProcessing ? "Processing..." : `Complete Purchase - ₹${course.price}`}
+        {isProcessing
+          ? "Processing..."
+          : `Complete Purchase - ₹${course.price}`}
       </button>
     </div>
   );
 }
+
+/* ================= MAIN PAGE ================= */
 
 function BuyCoursePageUdemy() {
   const { id } = useParams();
@@ -487,7 +485,9 @@ function BuyCoursePageUdemy() {
 
         let imagePath = courseData.image;
         if (imagePath && !imagePath.startsWith("http")) {
-          imagePath = `${API_BASE_URL}/${imagePath.replace(/\\/g, "/").replace(/^\//, "")}`;
+          imagePath = `${API_BASE_URL}/${imagePath
+            .replace(/\\/g, "/")
+            .replace(/^\//, "")}`;
         }
 
         setCourse({ ...courseData, image: imagePath });
@@ -519,7 +519,10 @@ function BuyCoursePageUdemy() {
       });
 
       if (res.data.clientSecret) {
-        localStorage.setItem("pendingPaymentIntentId", res.data.paymentIntentId);
+        localStorage.setItem(
+          "pendingPaymentIntentId",
+          res.data.paymentIntentId
+        );
         localStorage.setItem("pendingCourseId", course._id);
         localStorage.setItem("pendingPrice", String(course.price));
         setClientSecret(res.data.clientSecret);
@@ -544,11 +547,8 @@ function BuyCoursePageUdemy() {
           Buy now ₹{course.price}
         </button>
       ) : (
-        <Elements
-          stripe={stripePromise}
-          options={{ clientSecret }}
-        >
-          <CheckoutForm clientSecret={clientSecret} course={course} />
+        <Elements stripe={stripePromise} options={{ clientSecret }}>
+          <CheckoutForm course={course} />
         </Elements>
       )}
     </div>
