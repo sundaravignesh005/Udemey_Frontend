@@ -9,7 +9,6 @@ function CourseLandingPage() {
   const [image, setImage] = useState<File | null>(null);
   const [preview, setPreview] = useState<string>("");
 
-  const [userId, setUserId] = useState<string | null>(null);
 
   const [courseData, setcourseData] = useState({
     title: "",
@@ -27,7 +26,6 @@ function CourseLandingPage() {
   useEffect(() => {
     const id = localStorage.getItem("userId");
     if (id) {
-      setUserId(id);
       setcourseData((prev) => ({ ...prev, instructor: id }));
     }
   }, []);

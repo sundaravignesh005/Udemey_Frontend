@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import Rating from "../components/Features/Rating";
 import "../styles/Pages/_course-listing.scss";
 
 interface Course {

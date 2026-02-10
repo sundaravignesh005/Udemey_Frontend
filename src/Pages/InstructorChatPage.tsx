@@ -4,7 +4,6 @@ import axios from "axios";
 import "./InstructorChatPage.css";
 
 const BACKEND_URL = "http://localhost:8080";
-let socket: Socket;
 
 type Message = {
   senderId: string;
@@ -34,10 +33,12 @@ const InstructorChatPage: React.FC = () => {
   const [typingUser, setTypingUser] = useState("");
 
   const messagesRef = useRef<HTMLDivElement | null>(null);
+  const socketRef = useRef<Socket | null>(null);
 
   // INIT SOCKET
   useEffect(() => {
-    socket = io(BACKEND_URL, { transports: ["websocket"] });
+    const socket = io(BACKEND_URL, { transports: ["websocket"] });
+    socketRef.current = socket;
 
     socket.on("receiveMessage", ({ message }) => {
       setMessages((prev) => [...prev, message]);
@@ -46,15 +47,12 @@ const InstructorChatPage: React.FC = () => {
 
     // ⭐ NOTIFICATION: Listen for new messages from students
     socket.on("newMessageNotification", ({ roomId, senderName, message: msgText }) => {
-      // Show browser notification if permission granted
       if ("Notification" in window && Notification.permission === "granted") {
         new Notification(`New message from ${senderName}`, {
           body: msgText,
           icon: "/vite.svg",
         });
       }
-      
-      // Reload chat list to show unread count
       loadChatList();
     });
 
@@ -66,12 +64,14 @@ const InstructorChatPage: React.FC = () => {
       setTypingUser("");
     });
 
-    // Request notification permission
     if ("Notification" in window && Notification.permission === "default") {
       Notification.requestPermission();
     }
 
-    return () => socket.disconnect();
+    return () => {
+      socketRef.current?.disconnect();
+      socketRef.current = null;
+    };
   }, []);
 
   // LOAD CHAT LIST
@@ -99,7 +99,7 @@ const InstructorChatPage: React.FC = () => {
   const openChat = async (room: string) => {
     setRoomId(room);
 
-    socket.emit("joinRoom", {
+    socketRef.current?.emit("joinRoom", {
       roomId: room,
       userId: instructorId,
       userName: instructorName,
@@ -110,7 +110,7 @@ const InstructorChatPage: React.FC = () => {
     scrollToBottom();
 
     // mark messages as read
-    socket.emit("markRead", { roomId: room, userId: instructorId });
+    socketRef.current?.emit("markRead", { roomId: room, userId: instructorId });
 
     loadChatList();
   };
@@ -128,7 +128,7 @@ const InstructorChatPage: React.FC = () => {
       text: input,
     };
 
-    socket.emit("sendMessage", payload);
+    socketRef.current?.emit("sendMessage", payload);
 
     setMessages((prev) => [
       ...prev,
@@ -142,10 +142,10 @@ const InstructorChatPage: React.FC = () => {
   const handleTyping = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
 
-    socket.emit("typing", { roomId, userName: instructorName });
+    socketRef.current?.emit("typing", { roomId, userName: instructorName });
 
     setTimeout(() => {
-      socket.emit("stopTyping", { roomId });
+      socketRef.current?.emit("stopTyping", { roomId });
     }, 800);
   };
 
