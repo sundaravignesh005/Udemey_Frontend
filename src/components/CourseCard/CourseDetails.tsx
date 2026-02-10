@@ -3,8 +3,6 @@ import axios from "axios";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import "../../styles/Components/_courseCreation.scss";
 import { FaGreaterThan, FaIndianRupeeSign } from "react-icons/fa6";
-import { MdOutlineVerified } from "react-icons/md";
-import { IoMdContacts } from "react-icons/io";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FaRegHeart } from "react-icons/fa";
 

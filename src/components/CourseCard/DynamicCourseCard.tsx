@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../styles/Components/Instructor/_dynamic-course-slider.scss";
 import { MdOutlineVerified } from "react-icons/md";
@@ -29,7 +29,6 @@ function DynamicCourseSlider() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [hoverPosition, setHoverPosition] = useState({ top: 0, left: 0 });
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCourses = async () => {

@@ -1,7 +1,6 @@
 import "../../styles/Components/_cardslider.scss";
 import { MdOutlineVerified } from "react-icons/md";
-import Rating from "../Features/Rating";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -20,7 +19,6 @@ interface Course {
 function CourseCard({ course }: { course: Course }) {
   const [isHovered, setIsHovered] = useState(false);
   const [hoverPosition, setHoverPosition] = useState({ top: 0, left: 0 });
-  const navigate = useNavigate();
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();

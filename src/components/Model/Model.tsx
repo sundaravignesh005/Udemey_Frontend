@@ -1,5 +1,5 @@
 import "../../styles/Components/_cardslider.scss";
-import { MdOutlineVerified } from "react-icons/md";
+// removed unused MdOutlineVerified
 import { FaShoppingCart } from "react-icons/fa";
 import Rating from "../Features/Rating";
 
