@@ -1,6 +1,4 @@
-import { NavLink } from 'react-router-dom';
 import '../../styles/Components/_subscription.scss'
-// removed unused icons
 function SubScription() {
   return (
     <section>

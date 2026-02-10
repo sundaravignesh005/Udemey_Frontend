@@ -61,7 +61,7 @@ function DynamicCourseSlider() {
     fetchCourses();
   }, []);
 
-  const handleAddToCart = (e: React.MouseEvent, courseId: string) => {
+  const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     // TODO: Implement cart functionality
@@ -255,7 +255,7 @@ function DynamicCourseSlider() {
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  handleAddToCart(e, hoveredCourse._id);
+                  handleAddToCart(e);
                 }}
                 style={{
                   width: "100%",

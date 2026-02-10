@@ -45,8 +45,8 @@ const InstructorChatPage: React.FC = () => {
       scrollToBottom();
     });
 
-    // ⭐ NOTIFICATION: Listen for new messages from students
-    socket.on("newMessageNotification", ({ roomId, senderName, message: msgText }) => {
+   
+      socket.on("newMessageNotification", ({ senderName, message: msgText }) => {
       if ("Notification" in window && Notification.permission === "granted") {
         new Notification(`New message from ${senderName}`, {
           body: msgText,

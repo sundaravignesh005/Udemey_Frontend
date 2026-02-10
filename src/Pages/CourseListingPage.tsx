@@ -82,7 +82,7 @@ function CourseListingPage() {
               <button
                 key={category}
                 className={`category-tab ${selectedCategory === category ? "active" : ""}`}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => setSelectedCategory(category || "All")}
               >
                 {category}
               </button>
