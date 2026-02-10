@@ -26,7 +26,7 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 const stripePromise = loadStripe("pk_test_************************");
 
 function AppShell() {
-  const { isAuthenticated, currentRole, roles, logout } = useAuth();
+  const { isAuthenticated, currentRole,logout } = useAuth();
 
   return (
     <Elements stripe={stripePromise}>
