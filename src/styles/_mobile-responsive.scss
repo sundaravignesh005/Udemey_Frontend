@@ -1,0 +1,171 @@
+// Global Mobile Responsive Styles for Entire Website
+
+// ============================================
+// GLOBAL MOBILE UTILITIES
+// ============================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+// ============================================
+// MOBILE BREAKPOINTS
+// ============================================
+
+// Small Mobile: < 480px
+// Mobile: 480px - 768px
+// Tablet: 768px - 1024px
+// Desktop: > 1024px
+
+// ============================================
+// TABLET STYLES (768px - 1024px)
+// ============================================
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  // Container adjustments
+  .container,
+  .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  // Hide hover previews on tablet
+  .course-hover-preview-udemy {
+    display: none !important;
+  }
+}
+
+// ============================================
+// MOBILE STYLES (480px - 768px)
+// ============================================
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  // General container padding
+  .container,
+  .container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  // Hide desktop-only elements
+  .desktop-only {
+    display: none !important;
+  }
+
+  // Show mobile-only elements
+  .mobile-only {
+    display: block !important;
+  }
+
+  // Prevent horizontal scroll
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  // Make all buttons touch-friendly
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  // Stack flex containers
+  .flex-row {
+    flex-direction: column;
+  }
+
+  // Full width on mobile
+  .full-width-mobile {
+    width: 100% !important;
+  }
+}
+
+// ============================================
+// SMALL MOBILE STYLES (< 480px)
+// ============================================
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  // Reduce padding
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  // Smaller headings
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  h4 {
+    font-size: 16px !important;
+  }
+
+  // Touch-friendly inputs
+  input, textarea, select {
+    font-size: 16px !important; // Prevents zoom on iOS
+    padding: 12px !important;
+  }
+
+  // Smaller buttons but still touch-friendly
+  button, a.btn {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+}
+
+// ============================================
+// LANDSCAPE MOBILE
+// ============================================
+@media (max-width: 768px) and (orientation: landscape) {
+  // Adjust for landscape mobile
+  .card-slider-wrapper {
+    .mySwiper {
+      .swiper-slide {
+        width: 50% !important;
+      }
+    }
+  }
+}
+
+// ============================================
+// PRINT STYLES
+// ============================================
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+

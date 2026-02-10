@@ -1,0 +1,123 @@
+/* Container */
+.mylearn-container {
+  padding: 40px;
+  background: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.mylearn-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.mylearn-tabs {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.mylearn-tabs button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+.mylearn-tabs .active {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+/* Empty message */
+.mylearn-empty {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Grid layout */
+.mylearn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+}
+
+/* Each card */
+.mylearn-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.mylearn-card:hover {
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Thumbnail */
+.mylearn-thumb {
+  width: 100%;
+  height: 180px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-empty {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Content */
+.mylearn-content {
+  padding: 16px;
+}
+
+.mylearn-content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.inst-name {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  background: #e5e5e5;
+  height: 6px;
+  border-radius: 4px;
+  margin-top: 14px;
+}
+
+.progress-fill {
+  width: 30%;
+  height: 100%;
+  background: #a435f0;
+  border-radius: 4px;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}

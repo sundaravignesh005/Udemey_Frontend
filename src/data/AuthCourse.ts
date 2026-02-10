@@ -1,0 +1,151 @@
+export const BannerSlide = [
+  {
+    id: 1,
+    img: "https://img-c.udemycdn.com/notices/web_carousel_slide/image/bedc6aeb-62a6-48d1-a8c3-187c075b1fe4.jpg",
+    title: "Skills that start careers",
+    description:
+      "Introducing Career Accelerators - focus on the skills and real-world experience that get you noticed.",
+    link: "Explore All Carrer Acceletor",
+  },
+  {
+    id: 2,
+    img: "https://img-c.udemycdn.com/notices/web_carousel_slide/image/1ca69d1f-7b08-4753-8549-61c56d0f5e23.png",
+    title: "Skills that start careers",
+    description:
+      "Introducing Career Accelerators - focus on the skills and real-world experience that get you noticed.",
+    link: "Explore All Carrer Acceletor",
+  },
+  {
+    id: 3,
+    img: "https://img-c.udemycdn.com/notices/web_carousel_slide/image/b8958bb4-65ed-4735-b5f3-bdc1178de8ad.jpg",
+    title: "Skills that start careers",
+    description:
+      "Introducing Career Accelerators - focus on the skills and real-world experience that get you noticed.",
+    link: "Explore All Carrer Acceletor",
+  },
+];
+
+export const Recommended = [
+  {
+    id: 1,
+    title: "100 Days Of Code - 2025 Web Development Bootcamp ",
+    image: "https://img-c.udemycdn.com/course/480x270/4015622_2fee_4.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.7,
+    price: 839,
+    totalrate: 22435,
+    bestSeller: true,
+    highlights: [
+      "How the web works and how to get started as a web developer",
+      "Learn web development in 100 days (optional - you can also pick a different pace)",
+      "Build websites, web apps and web services (and understand what these  are)",
+      "Work with REST APIs",
+    ],
+  },
+  {
+    id: 2,
+    title: "JavaScript - The Complete Guide 2025 (Beginner + Advanced) ",
+    image: "https://img-c.udemycdn.com/course/480x270/851712_fc61_6.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.6,
+    price: 5039,
+    totalrate: 22435,
+    bestSeller: false,
+    highlights: [
+      "Learn JavaScript from scratch and in great detail - from beginner to advanced",
+      "All core features and concepts you need to know in modern JavaScript development",
+      "Everything you need to become a JavaScript expert and apply for JavaScript jobs",
+    ],
+  },
+  {
+    id: 3,
+    title: "The Complete JavaScript Course 2025: From Zero to Expert! ",
+    image: "https://img-c.udemycdn.com/course/480x270/4310724_f6c7.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.7,
+    price: 4109,
+    totalrate: 22435,
+    bestSeller: false,
+    highlights: [
+        "Learn JavaScript from scratch and in great detail - from beginner to advanced",
+      "All core features and concepts you need to know in modern JavaScript development",
+      "Everything you need to become a JavaScript expert and apply for JavaScript jobs",
+    ],
+  },
+  {
+    id: 4,
+    title: "SQL - The Complete Developer's Guide (MySQL, PostgreSQL)",
+    image: "https://img-c.udemycdn.com/course/480x270/1187016_51b3.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.8,
+    price: 3889,
+    totalrate: 22435,
+    bestSeller: true,
+    highlights: [
+      "Understand the core SQL syntax and concepts",
+      "Be able to install MySQL & PostgreSQL + different clients",
+      "Perform SQL CRUD operations",
+    ],
+  },
+  {
+    id: 5,
+    title: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert ",
+    image: "https://img-c.udemycdn.com/course/480x270/1436092_2024_4.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.6,
+    price: 4109,
+    totalrate: 22435,
+    bestSeller: true,
+    highlights: [
+      "Understand the core SQL syntax and concepts",
+      "Be able to install MySQL & PostgreSQL + different clients",
+      "Perform SQL CRUD operations",
+    ],
+  },
+  {
+    id: 6,
+    title: "Node.js, Express, MongoDB & More: The Complete Bootcamp ",
+    image: "https://img-c.udemycdn.com/course/480x270/2508942_11d3_3.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.7,
+    price: 3399,
+    totalrate: 22435,
+    bestSeller: false,
+    highlights: [
+      "How the web works and how to get started as a web developer",
+      "Learn web development in 100 days (optional - you can also pick a different pace)",
+      "Build websites, web apps and web services (and understand what these  are)",
+      "Work with REST APIs",
+    ],
+  },
+  {
+    id: 7,
+    title: "The Complete Full-Stack Web Development Bootcamp ",
+    image: "https://img-c.udemycdn.com/course/480x270/1672410_9ff1_5.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.7,
+    price: 3219,
+    totalrate: 22435,
+    bestSeller: true,
+    highlights: [
+      "How the web works and how to get started as a web developer",
+      "Learn web development in 100 days (optional - you can also pick a different pace)",
+    
+    ],
+  },
+  {
+    id: 8,
+    title: "100 Days Of Code - 2025 Web Development Bootcamp ",
+    image: "https://img-c.udemycdn.com/course/480x270/2776760_f176_10.jpg",
+    instructor: "Academind by Maximilian Schwarzmullar...",
+    rating: 4.7,
+    price: 839,
+    totalrate: 22435,
+    bestSeller: false,
+    highlights: [
+      "How the web works and how to get started as a web developer",
+      "Learn web development in 100 days (optional - you can also pick a different pace)",
+      
+    ],
+  },
+];

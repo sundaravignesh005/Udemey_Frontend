@@ -1,0 +1,8 @@
+1. Install React with vite and Typescript: npm create vite@latest edu-client -- --template react-ts;
+2. On Cd edu-client : npm install;
+3. create a backend folder : 
+    1. npm init
+    2.npm install --save express
+    3.npm install --save-dev nodemon
+4. npm install react-router-dom for routing in react;
+5. npm add -D sass-embedded for install sass in the react-vite ts project;

@@ -1,0 +1,213 @@
+.Tabs-box {
+  background-color: #d1d2e027;
+  .Tabs-container {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    padding: 20px;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      margin-top: -15px;
+      font-family: sans-serif;
+      color: #595c73;
+    }
+    .Tabs-content {
+      width: 90%;
+      height: auto;
+      margin: 50px auto;
+      /* Tabs.scss */
+
+      .tab-flex {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin-bottom: 1rem;
+        font-family: sans-serif;
+        list-style-type: none;
+        margin-bottom: 40px;
+      }
+      .TabPanel-flex {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        .course-card {
+          width: 300px;
+          border: 1px solid #c0c0c0;
+          border-radius: 10px;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+          .course-description {
+            padding: 10px 15px;
+            h3 {
+              font-size: 16px;
+              font-family: sans-serif;
+              line-height: 20px;
+            }
+            p {
+              margin-top: 10px;
+            }
+            .review {
+              font-size: 12px;
+            }
+            h4 {
+              font-weight: 800;
+              font-family: sans-serif;
+            }
+            .Premium {
+              display: inline-flex;
+              align-items: center;
+              border: 1px solid #6d28d2;
+              background-color: #6d28d2;
+              color: #fff;
+              padding: 5px 15px;
+              font-size: 12px;
+              border-radius: 5px;
+              font-weight: 600;
+              margin-top: -20px;
+
+              span{
+                display: flex;
+                align-items: center;
+                margin-top:0;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .react-tabs__tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #f3f3f3;
+        border-radius: 6px 6px 0 0;
+        font-weight: 600;
+        border: none;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+
+      .react-tabs__tab--selected {
+        background-color: #000;
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .All-Data-science-course{
+        border: 1px solid #6d28d2;
+        padding: 10px;
+        color:#6d28d2;
+        display: inline;
+        margin-left: 80px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+  }
+}
+
+// Mobile Responsive Styles
+@media (max-width: 768px) {
+  .Tabs-box {
+    .Tabs-container {
+      width: 100%;
+      padding: 20px 16px;
+      margin: 30px auto;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .Tabs-content {
+        width: 100%;
+        margin: 30px auto;
+
+        .tab-flex {
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 20px;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .TabPanel-flex {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 16px;
+
+          .course-card {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        .react-tabs__tab {
+          padding: 8px 16px;
+          font-size: 13px;
+          white-space: nowrap;
+        }
+      }
+
+      .All-Data-science-course {
+        display: block;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Tabs-box {
+    .Tabs-container {
+      padding: 16px 12px;
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      .Tabs-content {
+        .tab-flex {
+          gap: 6px;
+        }
+
+        .TabPanel-flex {
+          grid-template-columns: 1fr;
+
+          .course-card {
+            .course-description {
+              padding: 10px 12px;
+
+              h3 {
+                font-size: 14px;
+              }
+
+              h4 {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .react-tabs__tab {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

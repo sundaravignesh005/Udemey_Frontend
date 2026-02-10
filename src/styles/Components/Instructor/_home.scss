@@ -1,0 +1,390 @@
+.Instructor {
+  .Instructor-container {
+    position: relative;
+    img {
+      max-width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+    .Instructor-title {
+      position: absolute;
+      top: 85px;
+      left: 150px;
+      // width: 500px;
+      // border: 1px solid #c0c0c0;
+      h1 {
+        font-size: 4.2rem;
+        line-height: 70px;
+        letter-spacing: -0.048rem;
+        color: #2a2b3f;
+        font-weight: 700;
+      }
+      p {
+        margin-top: -50px;
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        line-height: 27px;
+        color: #2a2b3f;
+      }
+      a {
+        display: block;
+        width: 100%;
+        border: 1px solid #6d28d2;
+        padding: 10px 15px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0;
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        background-color: #6d28d2;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.Instructor-Slider {
+  .slider {
+    h1 {
+      text-align: center;
+      font-size: 3.5rem;
+      line-height: 70px;
+      letter-spacing: -0.048rem;
+      color: #2a2b3f;
+      font-weight: 700;
+    }
+    .Instructor-content-slider {
+      max-width: 80%;
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      .Instructor-card {
+        img {
+          width: 30%;
+          object-fit: cover;
+          margin-left: 120px;
+        }
+        .Instructor-content {
+          text-align: center;
+          h3 {
+            font-family: sans-serif;
+            font-weight: bold;
+          }
+          p {
+            max-inline-size: 34rem;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+.Student-Count {
+  width: 100%;
+  background-color: #6d28d2;
+  padding: 40px 0;
+  margin-top: 70px;
+
+  .Student-Count-Content {
+    max-width: 80%;
+    margin: auto;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+
+        p {
+          font-size: 3.5rem;
+          margin: 0;
+          font-weight: bold;
+          font-family: sans-serif;
+        }
+
+        span {
+          font-size: 1.2rem;
+          margin-top: 8px;
+          font-family: sans-serif;
+        }
+      }
+    }
+  }
+}
+.Instructor-tabs {
+  margin-top: 50px;
+
+  .Tabs-container {
+    max-width: 80%;
+    margin: auto;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .Tab-content {
+      margin-top: 40px;
+
+      .tab-flex {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        list-style-type: none;
+        max-width: 80%;
+        margin: auto;
+        padding: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #c0c0c0;
+      }
+
+      .react-tabs__tab {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 6px 6px 0 0;
+        font-weight: 600;
+        border: none;
+        transition: 0.3s ease;
+        position: relative;
+        font-family: sans-serif;
+        color: #2a2b3f;
+      }
+
+      .react-tabs__tab--selected {
+        color: black;
+        font-weight: bold;
+        border-bottom: 3px solid black;
+        outline: none;
+      }
+
+      .tabs-course-content {
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: auto;
+        gap: 30px;
+
+        .content-1 {
+          font-family: sans-serif;
+
+          p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+          }
+
+          .content-how-help {
+            margin-top: 20px;
+
+            h3 {
+              font-size: 1.2rem;
+              margin-bottom: 8px;
+              color: #6d28d2;
+            }
+
+            p {
+              font-size: 0.95rem;
+              color: #555;
+            }
+          }
+        }
+
+        .content-img {
+          text-align: center;
+
+          img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive behavior
+  @media (max-width: 768px) {
+    .tabs-course-content {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+
+      .content-img img {
+        max-width: 80%;
+      }
+    }
+  }
+}
+
+.Instructor-extra-detail {
+  margin-top: 50px;
+  padding: 40px 0;
+  .Instructor-extra-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    .Instructor-extra-image-1 {
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        margin-left: -50px;
+      }
+    }
+
+    .Instructor-extra-values {
+      text-align: center;
+      padding: 0 1rem;
+      margin-top: 0;
+      width: 100%;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #333;
+        font-family: sans-serif;
+      }
+    }
+    .Instructor-extra-image-2 {
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.Instrcutor-slider-card {
+  width: 100%;
+  background-color: #f6f7f9;
+  .Instructor-slider-container {
+    max-width: 70%;
+    margin: auto;
+    padding: 20px 0;
+
+    .Instructor-banner-slider {
+      display: flex;
+      gap: 20px;
+      .Instructor-banner-image {
+        img {
+          width: 370px;
+          object-fit: cover;
+        }
+      }
+      .Instructor-banner-content {
+        width: 400px;
+        p {
+          color: #2a2b3f;
+          font-size: 1.6rem;
+          font-family: sans-serif;
+          line-height: 35px;
+        }
+      }
+      .Instructor-author {
+        h4 {
+          font-family: sans-serif;
+          margin-top: 0;
+        }
+        .instructor-edu {
+          font-size: 0.95rem;
+          color: #666;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #fff;
+  color: #000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  &::after {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+.swiper-button-next {
+  right: 15px;
+}
+
+.swiper-button-prev {
+  left: 15px;
+}
+
+.Get-started {
+  width: 100%;
+  background-color: #f6f7f9;
+  .Get-started-container {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0 100px 0;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      margin-top: -30px;
+      font-size: 1.6rem;
+      font-family: sans-serif;
+    }
+    a {
+      display: inline-block;
+      border: 1px solid #6d28d2;
+      padding: 10px 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      letter-spacing: 0;
+      font-size: 1.2rem;
+      font-family: sans-serif;
+      background-color: #6d28d2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 10px 50px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.course-card-hover{
+  width: 90%;
+  margin: auto;
+  .course-card{
+    display: flex;
+    justify-content: space-around;
+    a{
+      width: 270px;
+      text-decoration: none;
+    }
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

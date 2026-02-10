@@ -1,0 +1,105 @@
+// NAVBAR COMPOENTS
+
+@use "../Components/navbar";
+
+// REGISTRATION COMPOENT
+
+@use "../Components/register";
+
+// FOOTER COMPONENT
+
+@use "../Components/footer";
+
+// HOMEBANNER COMPONENT
+
+@use "../Components/homebanner";
+
+//TABS COMPONENT
+
+@use "../Components/tabs";
+
+// BRAND COMPONENT
+
+@use "../Components/brandview";
+
+// CARDSLIDER COMPONENT
+
+@use "../Components/cardslider";
+
+// ONGOALS COMPONENT
+
+@use "../Components/ongoals";
+
+// SUBSCRIPTION COMPONENT
+
+@use "../Components/subscription";
+
+// LOGIN COMPONENTS
+
+@use "../Components/login";
+
+// AUTH NAVBAR COMPONENT
+
+@use "../Components/Auth/navabar";
+
+// AUTH HOMEPAGE COMPONENT
+@use "../Components/Auth/banner";
+
+// AUTH TOPPICK COMPONENT
+
+@use "../Components/Auth/topcourse";
+
+
+
+
+// INSTRUCTOR AUTH HOME COMPONENT
+
+@use "../Components/Instructor/home";
+
+// INSTRUCTOR COURSE CREATION COMPONENT
+
+@use "../Components/Instructor/coursecreationdashboard";
+
+// INSTRCUTOR PRICE CREATION COMPONENT
+
+@use "../Components//Instructor/pricepage";
+
+// INSTRUCTOR COURSE CARD COMPONENT
+
+@use "../Components/courseCard";
+
+// DYNAMIC COURSE SLIDER
+
+@use "../Components/Instructor/dynamic-course-slider";
+
+// Course Creation Detail Page
+
+@use "../Components/courseCreation";
+
+// INTENTED LEARNERS PAGE
+
+@use "../Components/Instructor/intendedLeaners";
+
+// DYNAMIC MODEL COMPONENT
+
+@use "../Components/Auth/model";
+
+// CART COMPONENT
+
+@use "../Components/Auth/cart";
+
+// BUY COURSE PAGE
+
+@use "../pages/buy-course-page";
+
+// COURSE LISTING PAGE
+
+@use "../pages/course-listing";
+
+// GLOBAL MOBILE RESPONSIVE
+
+@use "../mobile-responsive";
+@use "../mobile-global";
+
+
+

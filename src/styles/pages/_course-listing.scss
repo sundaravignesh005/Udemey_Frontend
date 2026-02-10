@@ -1,0 +1,339 @@
+// Course Listing Page - Exact Udemy Design
+.course-listing-page {
+  background: #fff;
+  min-height: 100vh;
+  padding: 24px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  .course-listing-loading {
+    padding: 100px;
+    text-align: center;
+    color: #1c1d1f;
+  }
+
+  .course-listing-container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  // Category Navigation - Exact Udemy Style
+  .category-navigation {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #d1d7dc;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-nav-wrapper {
+      display: flex;
+      gap: 0;
+      min-width: max-content;
+    }
+
+    .category-tab {
+      padding: 16px 16px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: #6a6f73;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      position: relative;
+
+      &:hover {
+        color: #1c1d1f;
+      }
+
+      &.active {
+        color: #1c1d1f;
+        font-weight: 700;
+        border-bottom-color: #1c1d1f;
+      }
+    }
+  }
+
+  // Courses Section
+  .courses-section {
+    margin-bottom: 32px;
+
+    .courses-swiper {
+      padding-bottom: 40px;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #1c1d1f;
+        background: #fff;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.08);
+        top: 50%;
+        margin-top: -24px;
+
+        &::after {
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        &:hover {
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+      }
+
+      .swiper-button-next {
+        right: -24px;
+      }
+
+      .swiper-button-prev {
+        left: -24px;
+      }
+    }
+  }
+
+  // Course Card Link
+  .course-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+
+  // Course Card - Exact Udemy Design
+  .course-card-udemy-exact {
+    background: #fff;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .course-image-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; // 16:9 aspect ratio
+      overflow: hidden;
+      background: #1c1d1f;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+
+      .bestseller-badge {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: #eceb98;
+        color: #3d3c0a;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 700;
+        z-index: 1;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    .course-content {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1c1d1f;
+      margin: 0 0 4px 0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: 44px;
+      max-height: 44px;
+    }
+
+    .course-instructor {
+      font-size: 12px;
+      color: #6a6f73;
+      margin: 0 0 8px 0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .course-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+
+      .rating-value {
+        font-size: 14px;
+        font-weight: 700;
+        color: #b4690e;
+        margin-right: 2px;
+      }
+
+      .stars {
+        display: flex;
+        gap: 1px;
+        margin-right: 4px;
+
+        .star {
+          font-size: 12px;
+          color: #e59819;
+          
+          &.filled {
+            color: #f3ca8c;
+          }
+        }
+      }
+
+      .rating-count {
+        font-size: 12px;
+        color: #6a6f73;
+      }
+    }
+
+    .course-price {
+      margin-top: auto;
+
+      .price-amount {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1c1d1f;
+      }
+    }
+  }
+
+  // Show All Link - Exact Udemy Style
+  .show-all-section {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid #d1d7dc;
+    margin-top: 32px;
+
+    .show-all-link {
+      color: #5624d0;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #401b9c;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 1024px) {
+  .course-listing-page {
+    .course-listing-container {
+      padding: 0 16px;
+    }
+
+    .category-navigation {
+      .category-tab {
+        padding: 12px 12px;
+        font-size: 13px;
+      }
+    }
+
+    .courses-section {
+      .courses-swiper {
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .course-listing-page {
+    padding: 16px 0;
+
+    .course-listing-container {
+      padding: 0 12px;
+    }
+
+    .category-navigation {
+      margin-bottom: 24px;
+
+      .category-tab {
+        padding: 10px 10px;
+        font-size: 12px;
+      }
+    }
+
+    .course-card-udemy-exact {
+      .course-content {
+        padding: 10px;
+      }
+
+      .course-title {
+        font-size: 14px;
+        min-height: 40px;
+        max-height: 40px;
+      }
+
+      .course-instructor {
+        font-size: 11px;
+      }
+
+      .course-rating {
+        .rating-value {
+          font-size: 12px;
+        }
+
+        .stars .star {
+          font-size: 10px;
+        }
+
+        .rating-count {
+          font-size: 11px;
+        }
+      }
+
+      .course-price .price-amount {
+        font-size: 14px;
+      }
+    }
+  }
+}
+

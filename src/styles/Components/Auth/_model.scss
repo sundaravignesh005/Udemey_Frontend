@@ -1,0 +1,53 @@
+.hover-model {
+  .Premium {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #6d28d2;
+    background-color: #6d28d2;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: sans-serif;
+
+    span {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+    }
+  }
+}
+
+.hover-model h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hover-model p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.hover-model ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.hover-model li {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tick-icon {
+  color: green;
+  font-size: 16px;
+  margin-top: 2px;
+}

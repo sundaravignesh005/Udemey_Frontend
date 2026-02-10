@@ -1,0 +1,179 @@
+.Goal-section {
+  background-color: #d1d2e037;
+  .Goal-Container {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    padding: 20px;
+    .Goal-Container-Title{
+        h1{
+            font-size: 2rem;
+        }
+    }
+    .Goal-Flex-Container {
+      display: flex;
+      justify-content: space-around;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .Goal-one {
+        flex: 1;
+      }
+
+      .Goal-two {
+        flex: 1;
+      }
+
+      .tablist {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .Goal-list-card {
+        cursor: pointer;
+        width: 100%;
+        max-width: 500px;
+        border: 1px solid #c0c0c0;
+        margin-bottom: 30px;
+        padding: 25px 20px;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #f3f0ff;
+          border: 1px solid #6d28d2;
+        }
+
+        .goal-content {
+          display: flex;
+          font-family: sans-serif;
+
+          .Goal-content-img img {
+            width: 80px;
+            height: auto;
+            margin-top: 20px;
+            margin-right: 10px;
+          }
+
+          .Goal-content-description {
+            h2 {
+              font-size: 20px;
+              margin-bottom: 5px;
+              font-weight: 600;
+            }
+
+            p {
+              font-size: 16px;
+              color: #555;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      .tabpanel {
+        margin-top: -20px;
+        .tab-image img {
+          width: 100%;
+          max-width: 600px;
+          height: auto;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Responsive Styles
+@media (max-width: 768px) {
+  .Goal-section {
+    .Goal-Container {
+      width: 100%;
+      padding: 20px 16px;
+      margin: 30px auto;
+
+      .Goal-Container-Title {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .Goal-Flex-Container {
+        flex-direction: column;
+        gap: 20px;
+
+        .Goal-one,
+        .Goal-two {
+          flex: 1;
+          width: 100%;
+        }
+
+        .Goal-list-card {
+          max-width: 100%;
+          padding: 20px 16px;
+
+          .goal-content {
+            flex-direction: column;
+
+            .Goal-content-img {
+              img {
+                width: 60px;
+                margin-top: 0;
+                margin-bottom: 10px;
+              }
+            }
+
+            .Goal-content-description {
+              h2 {
+                font-size: 18px;
+              }
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .tabpanel {
+          .tab-image img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Goal-section {
+    .Goal-Container {
+      padding: 16px 12px;
+
+      .Goal-Container-Title {
+        h1 {
+          font-size: 1.3rem;
+        }
+      }
+
+      .Goal-Flex-Container {
+        .Goal-list-card {
+          padding: 16px 12px;
+
+          .goal-content {
+            .Goal-content-description {
+              h2 {
+                font-size: 16px;
+              }
+
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

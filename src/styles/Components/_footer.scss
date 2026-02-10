@@ -1,0 +1,206 @@
+.footer {
+  background-color: #2a2b3f;
+//   background-color: #202230;
+  color: #fff;
+  font-family: sans-serif;
+
+  .footer-title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+      padding: 15px 20px;
+    .Companies {
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+  hr {
+    border: 1px solid #fff;
+  }
+  .footer-list{
+    max-width:100%;
+    background-color:#2a2b3f;
+    padding: 15px 20px;
+
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        ul{
+            list-style-type: none;
+        }
+        .In-demand-Careers{
+            h4{
+                margin-left: 35px;
+            }
+            li{
+                line-height: 25px;
+            }
+        }
+    }
+    .Footer-2-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-top: 30px;
+
+        ul{
+            list-style-type: none;
+        }
+        .In-demand-Careers{
+            h4{
+                margin-left: 35px;
+            }
+            li{
+                line-height: 25px;
+            }
+        }
+    }
+  }
+  .Footer-Details{
+    background-color:#202230 ;
+    .Footer-Grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-top: 30px;
+        padding: 20px 15px;
+
+        .About{
+            h4{
+                margin-left: 40px;
+            }
+            ul{
+                list-style-type: none;
+
+                li{
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+    hr{
+        border: 1px solid #fff;
+    }
+    .Footer-copywrite{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        .Udemy-Logo{
+            display: flex;
+            img{
+                width: 100px;
+                height:50px;
+            }
+            p{
+                margin-top: 20px;
+            }
+        }
+    }
+  }
+}
+
+// Mobile Responsive Styles
+@media (max-width: 768px) {
+  .footer {
+    .footer-title {
+      flex-direction: column;
+      gap: 20px;
+      padding: 15px 16px;
+
+      .Companies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        img {
+          margin-right: 10px;
+          max-width: 80px;
+        }
+      }
+    }
+
+    .footer-list {
+      padding: 15px 16px;
+
+      .footer-content,
+      .Footer-2-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+
+        .In-demand-Careers {
+          h4 {
+            margin-left: 0;
+            font-size: 14px;
+          }
+
+          li {
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
+    .Footer-Details {
+      .Footer-Grid {
+        grid-template-columns: 1fr;
+        padding: 20px 16px;
+        gap: 20px;
+
+        .About {
+          h4 {
+            margin-left: 0;
+            font-size: 14px;
+          }
+
+          ul {
+            li {
+              font-size: 13px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      .Footer-copywrite {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 16px;
+        text-align: center;
+
+        .Udemy-Logo {
+          justify-content: center;
+
+          img {
+            width: 80px;
+            height: 40px;
+          }
+
+          p {
+            margin-top: 10px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    .footer-title {
+      .Companies {
+        img {
+          max-width: 60px;
+        }
+      }
+    }
+
+    .footer-list {
+      .footer-content,
+      .Footer-2-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

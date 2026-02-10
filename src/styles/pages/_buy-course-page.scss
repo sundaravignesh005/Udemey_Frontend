@@ -1,0 +1,353 @@
+/* =======================
+   BUY COURSE PAGE (UDEMY EXACT CLONE)
+======================= */
+
+.buy-course-page {
+  background: #fff;
+  color: #1c1d1f;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Loading Screen */
+  .buy-course-loading {
+    padding: 100px;
+    text-align: center;
+    background: #1c1d1f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs-section {
+    background: #fff;
+    padding: 16px 0;
+    border-bottom: 1px solid #d1d7dc;
+  }
+
+  .breadcrumbs-container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #6a6f73;
+
+    a {
+      color: #5624d0;
+      text-decoration: underline;
+    }
+
+    .separator {
+      color: #6a6f73;
+    }
+  }
+
+  /* Main Layout */
+  .buy-course-container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .buy-course-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+
+    /* LEFT SECTION - COURSE INFO */
+    .course-info-section {
+      flex: 1;
+      max-width: 800px;
+
+      /* Black Udemy Header */
+      .course-header-dark {
+        background: #1c1d1f;
+        color: #fff;
+        padding: 32px;
+        margin-bottom: 32px;
+        border-radius: 0; /* EXACT UDEMY */
+        border-bottom: 1px solid #3e3e3e;
+
+        .course-title-main {
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 1.2;
+        }
+
+        .course-subtitle {
+          font-size: 20px;
+          opacity: 0.9;
+          margin-bottom: 16px;
+        }
+
+        .course-badges .badge.bestseller {
+          background: #eceb98;
+          color: #3d3c0a;
+          padding: 4px 12px;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 700;
+        }
+
+        .course-instructor-link {
+          font-size: 14px;
+          color: #cec0fc;
+
+          .instructor-name {
+            text-decoration: underline;
+          }
+        }
+
+        .course-metadata {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          color: #d1d7dc;
+          font-size: 14px;
+        }
+
+        /* Rating Section EXACT MATCH */
+        .course-rating-section {
+          margin-top: 16px;
+          margin-bottom: 24px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 16px;
+
+          .rating-display {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .rating-value {
+              font-size: 32px;
+              color: #f3ca8c;
+              font-weight: 700;
+            }
+
+            .stars .star {
+              font-size: 24px; /* UDEMY SIZE */
+              color: #6a6f73;
+
+              &.filled {
+                color: #f3ca8c;
+              }
+            }
+
+            .rating-link {
+              color: #cec0fc;
+              text-decoration: underline;
+              font-size: 14px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        /* Purple Premium Box */
+        .premium-notice-box {
+          display: flex;
+          gap: 12px;
+          padding: 16px;
+          background: #a435f0;
+          border-radius: 4px;
+          margin-top: 20px;
+
+          .premium-icon {
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            color: #a435f0;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      /* WHAT YOU'LL LEARN BOX (EXACT UDEMY) */
+      .what-you-learn {
+        margin-bottom: 32px;
+
+        .section-title {
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+
+        .highlights-grid {
+          background: #f7f9fa; /* UDEMY BG */
+          padding: 16px;
+          border: 1px solid #d1d7dc;
+          border-radius: 4px;
+
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+
+          .highlight-item {
+            display: flex;
+            gap: 10px;
+
+            .check-icon {
+              color: #3fb85f;
+              margin-top: 4px;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .course-description-section .description-text {
+        font-size: 16px; /* Updated to Udemy */
+        line-height: 1.6;
+      }
+    }
+
+    /* RIGHT SECTION — PURCHASE CARD */
+    .purchase-card-wrapper {
+      width: 400px;
+      position: sticky;
+      top: 24px;
+      .purchase-card {
+        border: 1px solid #d1d7dc;
+        border-radius: 2px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* EXACT UDEMY */
+        overflow: hidden;
+        .purchase-card-video {
+          width: 100%;
+          padding-top: 56.25%;
+          position: relative;
+          background: #000;
+
+          img,
+          video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .purchase-content {
+          padding: 24px;
+          /* Price Section */
+          .price-section {
+            margin-bottom: 12px;
+
+            .current-price {
+              font-size: 32px;
+              font-weight: 700;
+            }
+
+            .old-price {
+              color: #6a6f73;
+              text-decoration: line-through;
+              font-size: 16px;
+            }
+
+            .discount-badge {
+              color: #c14532;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+          /* BUTTONS */
+          .purchase-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+
+            .btn-add-to-cart {
+              padding: 14px;
+              background: #a435f0;
+              color: #fff;
+              border: none;
+              font-weight: 700;
+              border-radius: 2px;
+
+              &:hover {
+                background: #8710d8;
+              }
+            }
+            .btn-buy-now {
+              padding: 14px;
+              background: #fff;
+              color: #a435f0;
+              border: 1px solid #a435f0;
+              border-radius: 2px;
+
+              &:hover {
+                background: #f7f9fa;
+              }
+            }
+          }
+          /* Course Includes */
+          .course-includes {
+            border-top: 1px solid #d1d7dc;
+            padding-top: 16px;
+
+            h3 {
+              font-size: 16px;
+              font-weight: 700;
+              margin-bottom: 12px;
+            }
+
+            .include-item {
+              font-size: 14px;
+              display: flex;
+              gap: 8px;
+
+              .include-icon {
+                color: #6a6f73;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// TABLET 
+@media (max-width: 1024px) {
+  .buy-course-layout {
+    gap: 24px;
+
+    .purchase-card-wrapper {
+      width: 350px;
+    }
+  }
+}
+ // mobile 
+@media (max-width: 768px) {
+  .buy-course-layout {
+    flex-direction: column;
+
+    .purchase-card-wrapper {
+      width: 100%;
+      position: static;
+    }
+  }
+}
+// extra mob
+@media (max-width: 480px) {
+  .course-title-main {
+    font-size: 22px !important;
+  }
+}
+

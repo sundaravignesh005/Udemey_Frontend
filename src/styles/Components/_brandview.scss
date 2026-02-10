@@ -1,0 +1,85 @@
+.Brand-container {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  padding: 20px;
+
+  h2 {
+    font-family: sans-serif;
+    text-align: center;
+    color: #2a2b3f;
+    font-size: 18px;
+  }
+  .Brand-Partner {
+    margin-top: 50px;
+    .Brand-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 100px;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Responsive Styles
+@media (max-width: 768px) {
+  .Brand-container {
+    width: 100%;
+    padding: 20px 16px;
+    margin: 30px auto;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    .Brand-Partner {
+      margin-top: 30px;
+
+      .Brand-list {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 15px;
+
+        li {
+          img {
+            max-width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Brand-container {
+    padding: 16px 12px;
+
+    h2 {
+      font-size: 14px;
+    }
+
+    .Brand-Partner {
+      .Brand-list {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 10px;
+
+        li {
+          img {
+            max-width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
